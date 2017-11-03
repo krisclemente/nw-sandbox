@@ -9,7 +9,7 @@
   "selenium" : {
     "start_process" : true,
     "server_path" : "bin/selenium-server-standalone-3.7.0.jar",
-    "log_path" : fasle,
+    "log_path" : false,
     "port" : 4444,
     "cli_args" : {
       "webdriver.chrome.driver" : "",
