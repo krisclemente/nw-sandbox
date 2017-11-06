@@ -14,9 +14,11 @@ module.exports = {
                     .waitForElementVisible( '@searchButton', 1000 )
                     .click( '@searchButton' )
                     .api.pause( 3000 );
+                return this;
             },
             verifySearchContains: function(string) {
                 this.assert.containsText( '@searchResults', string );
+                return this;
             }
         }
     ]
