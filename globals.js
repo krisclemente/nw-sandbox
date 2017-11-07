@@ -5,5 +5,5 @@ module.exports = {
     afterEach: function( browser, done ) {
         browser.end(done);
     },
-
+    waitForConditionTimeout: 5000
 }
