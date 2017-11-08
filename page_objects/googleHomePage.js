@@ -9,10 +9,8 @@ module.exports = {
     commands: [
         {
             googleSearchFor: function(string) {
-                this.waitForElementVisible( '@searchTextBar', 1000 )
-                    .setValue( '@searchTextBar', string )
-                    .waitForElementVisible( '@searchButton', 1000 )
-                    .click( '@searchButton' )
+                this.setValueWhenVisible( '@searchTextBar', string )
+                    .clickWhenVisible( '@searchButton' )
                     .api.pause( 3000 );
                 return this;
             },
