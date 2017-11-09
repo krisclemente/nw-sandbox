@@ -1,0 +1,17 @@
+version: '2'
+services:
+    nw-sandbox:
+        build: .
+        environment:
+            SELENIUM_HOST: selenium-standalone-chrome
+        depends_on:
+            - selenium-standalone-chrome
+        links:
+            - selenium-standalone-chrome
+        command: ['/bin/bash', 'run-tests.sh']
+    selenium-standalone-chrome:
+        image: selenium/standalone-chrome
+        ports:
+            - "4444:4444"
+        volumes:
+            - /dev/shm:/dev/shm
