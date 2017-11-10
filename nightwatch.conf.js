@@ -7,6 +7,10 @@ module.exports = {
   "custom_assertions_path" : "custom_assertions",
   "page_objects_path" : "page_objects",
   "globals_path" : "globals",
+  "test_workers": {
+      "enabled": true,
+      "workers": 3,
+  },
 
   "selenium" : {
     "start_process" : false,
